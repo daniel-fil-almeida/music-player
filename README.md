@@ -7,14 +7,14 @@ Getting Started
 
 To get you started you can simply clone the music-player repository and install the dependencies.
 
-# Clone music-player:
+### Clone music-player:
 git clone https://github.com/daniel-fil-almeida/music-player.git
 
 
-# Install Dependencies
+### Install Dependencies
 npm install
 
-# Run the Application
+### Run the Application
 npm start
 
 
