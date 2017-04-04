@@ -1,0 +1,47 @@
+{
+  "name": "music-player",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "fs": "0.0.2",
+    "fs-extra": "^0.26.7",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-html2js": "^0.3.1",
+    "gulp-install": "^1.1.0",
+    "gulp-less": "^3.0.5",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "lodash": "^4.6.1",
+    "node-uuid": "^1.4.7"
+  },
+  "dependencies": {
+    "@angular/router": "^0.2.0",
+    "angular": "^1.5.3",
+    "angular-ui-bootstrap": "^2.5.0",
+    "bootstrap": "^3.3.6"
+  },
+  "description": "Seed project for angular apps using angular 1.5.x, gulp and twitter bootstrap 3.",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-fil-almeida/music-player.git"
+  },
+  "keywords": [
+    "music",
+    "player"
+  ],
+  "author": "Daniel Almeida",
+  "bugs": {
+    "url": "https://github.com/daniel-fil-almeida/music-player/issues"
+  },
+  "homepage": "https://github.com/daniel-fil-almeida/music-player#readme"
+}

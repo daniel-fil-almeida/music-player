@@ -1,23 +1,28 @@
-# music-player
-
+# angular-seed
 
 Seed project for angular apps using angular 1.5.x, gulp and twitter bootstrap 3.
 
-Getting Started
+## Getting Started
 
-To get you started you can simply clone the music-player repository and install the dependencies.
+To get you started you can simply clone the angular-seed repository and install the dependencies.
 
-### Clone music-player:
-git clone https://github.com/daniel-fil-almeida/music-player.git
+### Clone angular-seed
 
+```
+git clone https://github.com/martinbilek/angular-seed.git
+cd angular-seed
+```
 
 ### Install Dependencies
-npm install
 
+```
+npm install
+```
 
 ### Run the Application
+
+```
 npm start
+```
 
-
-
-Now browse to the app at http://localhost:8000/.
+Now browse to the app at `http://localhost:8080/`.

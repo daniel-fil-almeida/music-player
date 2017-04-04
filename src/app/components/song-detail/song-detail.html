@@ -1,0 +1,29 @@
+<div class="container">
+    <div *ngIf="song">
+        <div class="page-header">
+            <h1>
+            {{song.track}}
+            <i class="glyphicon glyphicon-music"></i>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p>
+                            <strong>Track: </strong>  {{song.track}}
+                        </p>
+                        <p>
+                            <strong>Albums: </strong>  {{song.album}}
+                        </p>
+                        <p>
+                            <strong>Artist: </strong> <span>{{song.artist}}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
