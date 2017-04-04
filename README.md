@@ -7,6 +7,7 @@ To get you started you can simply clone the music-player repository and install 
 
 ```
 git clone https://github.com/daniel-fil-almeida/music-player.git
+cd music-player
 
 ```
 
