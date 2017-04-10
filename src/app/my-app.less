@@ -1,7 +1,128 @@
+@import 'variables';
+
 body {
-    margin-top: 80px;
+    margin-top: @extra-large;
+    background-color: @background;
+}
+
+
+nav
+{
+	background-color: @background;
 }
 
 .loading {
     text-align: center;
+    color: @text-general;
+}
+
+h2
+{
+	font-size: @x-large;
+	font-weight: @font-weight-h2;
+	color:@titles-general;
+	letter-spacing:  @letter-title-spacing;
+
+}
+
+
+
+
+.main-container
+{
+	background-color: blue;
+	padding:@margin-lg;
+}
+
+//header
+.navigation
+{
+  
+  input
+  {
+		margin-top:5px;
+	    border-radius: @border-radius;
+	    border: none;
+	    background: white;
+	    color: @background;
+	    padding-left: @padding-lg;
+	    outline: none;
+	    background-image: url("https://maxcdn.icons8.com/iOS7/PNG/25/Very_Basic/search-25.png");
+	    background-repeat: no-repeat;
+	    background-size: 10%;
+	    background-position: 5px;
+	    vertical-align: middle;
+	   
+
+	}
+
+}
+
+
+
+
+
+//playlist
+
+.page-header
+{
+	border:0px;
+	margin-bottom: 0px;
+
+}
+
+.list-group-item 
+{
+	background-color:transparent;
+
+	&:hover {
+      
+       background-color:@border-hover-list!important;
+       
+    }
+
+}
+
+
+.track
+{
+	border-top: @border-size-small solid @border;
+	align-items: center;
+	color : @text-general!important;
+	border-left:0px;
+	border-right:0px;
+	border-bottom:0px;
+
+
+   	&:hover {
+      
+       background-color:@border-hover-list!important;
+       
+    }
+
+
+
+}
+
+
+//footer
+
+.text-muted
+{
+	text-align: center;
+	color:@text-general;
+
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: @large-footer-size;
+    background-color: @header_footer;
+	display: flex;
+	align-items: center;
+
+
 }

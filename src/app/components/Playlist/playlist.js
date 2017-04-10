@@ -5,7 +5,9 @@
        
         $scope.status;
         $scope.songs;
-       
+        
+
+        $scope.subjects = ['Math', 'Physics', 'Chemistry', 'Hindi', 'English'];
 
         getSongs();
 
@@ -18,6 +20,8 @@
                     $scope.status = 'Unable to load song data: ' + error.message;
                 });
         }
+
+        
 
         
 

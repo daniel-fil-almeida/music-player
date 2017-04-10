@@ -15,15 +15,17 @@ var data = {
 	}],
 	musics: [{
 		"id": 1,
-		"album" : "nirvana",
-		"artist" : "nirlvana",
-		"track" : "nirvana"
+		"album" : "Nevermind",
+		"artist" : "Nirvana",
+		"track" : "Smells Like Teen Spirit",
+		"year" : "1991"
 	},
 	{
 		"id": 2,
-		"album" : "slipknot",
-		"artist" : "slipknot",
-		"track" : "slipknot"
+		"album" : "All Hope is Gone",
+		"artist" : "Slipknot",
+		"track" : "Psychosocial",
+		"year" : "2008"
 	}],
 	favorites: [{
 		userid: 1,
