@@ -1,7 +1,7 @@
 'use strict';
 
 function headerController($scope) {
-
+	
 	$scope.isLoggedin=false;
 
     $scope.login  = function() { 
@@ -12,7 +12,7 @@ function headerController($scope) {
 
 }
 
-angular.module('my-app').component('header', {
+angular.module('my-app').component('header',{
     templateUrl: 'app/components/navigation/header.html',
     controller: headerController,
 });

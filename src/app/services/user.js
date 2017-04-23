@@ -6,16 +6,13 @@ angular.module('my-app')
     var urlBase = 'http://localhost:8080/api/';
     var userFactory = {};
 
-    userFactory.add = function () {
-        return $http.get(urlBase+"users");
+    userFactory.all = function () {
+        return $http.get(urlBase+"users",{ cache: true});
     };
 
     userFactory.get = function (id) {
-        return $http.get(urlBase+"users/"+id);
+        return $http.get(urlBase+"users/"+id,{ cache: true});
     };
-
-
-   
 
     return userFactory;
 }]);

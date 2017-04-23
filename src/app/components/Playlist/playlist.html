@@ -1,4 +1,11 @@
 <div class="container">
+    <!-- Search Bar-->
+    <div class="row search-box">
+        <a ng-href="#" class="glyphicon glyphicon-chevron-left controlers-small"></a>
+        <a ng-href="#" class="glyphicon glyphicon-chevron-right controlers-small"></a>
+        <input class="search-input" type="text" placeholder="Search" ng-model="searchSong">
+    </div>
+    
     <div class="page-header">
         <h2>
         Songs
@@ -6,39 +13,74 @@
     </div>
     
     <div class="row">
-        <div class="list-group">
-            <a class="list-group-item track" ng-repeat="song in songs" ng-link="['SongDetail', {id: song.id}]">
+        <div class="tracks list-group ">
+            <!--    <a class="list-group-item track" ng-repeat="song in songs" ng-link="['SongDetail', {id: song.id}]">-->
+            <div   class="list-group-item track" ng-repeat="song in songs| filter:searchSong as filteredSongs" >
                 <div class="row">
-
-                    <div class="col-md-1 col-xs-1">
-                        <span class="glyphicon glyphicon-ok"></span>
+                    <div class="col-md-1 col-xs-1 col-centered">
+                        <span>{{$index+1}}</span>
+                    </div>
+                    <div class="col-md-1 col-xs-1" ng-click="selectSong(song)">
+                        <span  class="glyphicon glyphicon-play-circle controlers"></span>
                     </div>
                     
                     <div class="col-md-3 col-xs-3">
                         <b>{{song.track}}</b>
                     </div>
-
-                    <div class="col-md-2 col-xs-2">
+                    <div class="col-md-3 col-xs-3">
                         <b>{{song.artist}}</b>
                     </div>
-
-                    <div class="col-md-3 col-xs-3">
+                    <div class="col-md-2 col-xs-2">
                         <b>{{song.album}}</b>
                     </div>
-
-                    <div class="col-md-2 col-xs-2">
+                    <div class="col-md-1 col-xs-1">
                         <b>{{song.year}}</b>
                     </div>
-
                     <div class="col-md-1 col-xs-1">
-                    
-                        <span class="glyphicon glyphicon-option-horizontal"></span>
-
+                        
+                        <div class="dropdown">
+                            <a ng-href="#" data-toggle="dropdown" class="glyphicon glyphicon-option-horizontal dropdown-toggle more controlers"></a>
+                            <ul class="dropdown-menu more-options-menu">
+                                <li><a class="text-menu-options" href="#">Add To Queue</a></li>
+                                <li><a class="text-menu-options" href="#">Go to Sound Radio</a></li>
+                                <li class="divider"></li>
+                                <li><a class="text-menu-options" href="#">Go to Artist</a></li>
+                                <li class="text-menu-options disabled"><a href="#">Go to Album</a></li>
+                                <li class="divider"></li>
+                                <li><a class="text-menu-options" href="#">Save to Your Music</a></li>
+                                <li><a class="text-menu-options" href="#">Add to Playlist</a></li>
+                                <li><a class="text-menu-options" href="#">Share</a></li>
+                            </ul>
+                        </div>
+                        
                     </div>
                 </div>
-                
-            </a>
+            </div>
+        </div>
+        <!-- Player-->
+        <div ng-show="shouldShowControllers(filteredSongs)">
+            <div class="control-box">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-12 track-playing" >
+                            <span class="track-playing-name" ng-bind="selectedSong.track"></span>
+                            <span class="track-playing-artist" ng-bind="selectedSong.artist"></span>
+                        </div>
+                        
+                        <div class="col-md-6 col-xs-12  col-centered">
+                            <a ng-href="#" class="glyphicon glyphicon-random controlers-small"></a>
+                            <a ng-href="#" class="glyphicon glyphicon-step-backward controlers-small"></a>
+                            <a ng-href="#" class="glyphicon glyphicon-play-circle controlers"></a>
+                            
+                            
+                            <a ng-href="#" class="glyphicon glyphicon-step-forward controlers-small"></a>
+                            <a ng-href="#" class="glyphicon glyphicon glyphicon-repeat controlers-small"></a>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-

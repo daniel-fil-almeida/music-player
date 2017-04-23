@@ -4,7 +4,7 @@ var gulp = require('gulp');
 var connect = require('gulp-connect');
 var concat = require('gulp-concat');
 var html2js = require('gulp-html2js');
-
+var minify = require('gulp-minify');
 
 
 

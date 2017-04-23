@@ -6,16 +6,14 @@ angular.module('my-app')
     var urlBase = 'http://localhost:8080/api/';
     var songFactory = {};
 
-    songFactory.getSongs = function () {
-        return $http.get(urlBase+"musics");
+    songFactory.all = function () {
+        return $http.get(urlBase+"musics",{ cache: true});
     };
 
-    songFactory.getSong = function (id) {
-        return $http.get(urlBase+"musics/"+id);
+    songFactory.get = function (id) {
+        return $http.get(urlBase+"musics/"+id,{ cache: true});
     };
 
-
-   
 
     return songFactory;
 }]);

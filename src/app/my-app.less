@@ -1,5 +1,14 @@
 @import 'variables';
 
+.no-padding {
+   padding: 0 !important;
+}
+
+.no-margin {
+   margin: 0 !important;
+}
+
+
 body {
     margin-top: @extra-large;
     background-color: @background;
@@ -9,6 +18,11 @@ body {
 nav
 {
 	background-color: @background;
+}
+
+a 
+{
+	  text-decoration: none!important;
 }
 
 .loading {
@@ -28,61 +42,69 @@ h2
 
 
 
-.main-container
-{
-	background-color: blue;
-	padding:@margin-lg;
-}
 
-//header
-.navigation
-{
-  
-  input
-  {
-		margin-top:5px;
-	    border-radius: @border-radius;
-	    border: none;
-	    background: white;
-	    color: @background;
-	    padding-left: @padding-lg;
-	    outline: none;
-	    background-image: url("https://maxcdn.icons8.com/iOS7/PNG/25/Very_Basic/search-25.png");
-	    background-repeat: no-repeat;
-	    background-size: 10%;
-	    background-position: 5px;
-	    vertical-align: middle;
-	   
+//Jumbotron
 
-	}
+.jumbotron
+{
+	margin-top: @margin-sm;
 
 }
-
-
-
 
 
 //playlist
 
+.search-input
+{
+  
+
+	    border-radius: @border-radius;
+	    border: none;
+	    background: white;
+	    color: @background;
+	    vertical-align: middle;	   
+	    outline: none;
+	    background-image: url("https://maxcdn.icons8.com/iOS7/PNG/25/Very_Basic/search-25.png");
+	    background-repeat: no-repeat;
+	    background-size: 10%;
+	    background-position: @margin-xs;
+	    padding-bottom: @padding-xs;
+	    padding-left: @padding-lg;
+	    padding-top:@padding-xs;
+		margin-top:@margin-xs;
+	    margin-left: @margin-sm;
+
+}
+
+
 .page-header
 {
 	border:0px;
-	margin-bottom: 0px;
+	.no-margin;
+
 
 }
 
-.list-group-item 
+.col-centered{
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+
+.search-box
 {
-	background-color:transparent;
-
-	&:hover {
-      
-       background-color:@border-hover-list!important;
-       
-    }
-
+	align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    padding:@padding-sm;
+	
 }
-
 
 .track
 {
@@ -92,6 +114,7 @@ h2
 	border-left:0px;
 	border-right:0px;
 	border-bottom:0px;
+	background-color:transparent;
 
 
    	&:hover {
@@ -102,27 +125,130 @@ h2
 
 
 
+    .track-index:hover
+	{
+    	 background-repeat: no-repeat;
+	}
+
+	.more
+	{
+		color:@text-general
+	}
+
+ 
+
 }
 
+
+
+.track-playing {
+    display: flex;
+    flex-flow: column wrap;
+
+    .track-playing-name
+    {
+		
+    }
+
+    .track-playing-artist
+    {
+		font-size: @font-size-base / 1.2
+    }
+}
+
+.controlers
+{
+		color:@text-general;
+		-webkit-transition: all .2s ease-in-out; 
+		padding-right:@padding-xs;
+		padding-left:@padding-xs;
+		cursor: pointer;
+
+		&:hover {
+      
+       		  -webkit-transform: scale(1.2); 
+       		  color:@text-general;
+       		 
+       
+    	}
+    	&:focus {
+      
+       		  color:@controller-active;
+       		
+       
+    	}
+	
+}
+.controlers-small
+{
+	.controlers;
+	font-size: @medium!important;
+
+}
+
+
+
+
+.control-box {
+    align-items: center;
+    background: @background-inside none repeat scroll 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    padding:@padding-sm;
+    border-bottom: @border-size-sm solid @border;
+    color:@text-general;
+
+
+    .glyphicon {
+    	font-size: @x-large;
+	}
+    
+
+}
+
+
+.more-options-menu
+{
+	background-color: @background-inside;
+	z-index:2;
+
+
+	.text-menu-options
+	{
+		color:@text-general;
+		font-size:@font-size-menu;
+		&:hover
+		{
+			background-color:@border-hover-list;
+			color:@text-general;
+		}
+	}
+
+	
+}
+
+
+.disabled
+{
+	color: darken(@text-general, 50%)!important;
+
+}
 
 //footer
 
-.text-muted
-{
-	text-align: center;
-	color:@text-general;
 
-}
-
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+footer {
+    position:relative;
+    clear:both;
     height: @large-footer-size;
-    background-color: @header_footer;
-	display: flex;
+    display: flex;
 	align-items: center;
+    background-color: @header_footer;
+    color:@text-general;
+    align-items: center;
+  	justify-content: center;
+  	margin-top: @margin-lg;
 
-
+ 
 }
+

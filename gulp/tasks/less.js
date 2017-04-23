@@ -3,6 +3,7 @@ var less = require('gulp-less');
 var utils = require('gulp-util');
 var connect = require('gulp-connect');
 var concat = require('gulp-concat');
+var cleanCSS = require('gulp-clean-css');
 
 var cfg = require('../config');
 
@@ -12,6 +13,10 @@ gulp.task('less', function(){
         ])
         .pipe(less({paths: 'node_modules'}).on('error', utils.log))
         .pipe(concat('app.css'))
+        .pipe(cleanCSS({debug: true}, function(details) {
+            console.log(details.name + ': ' + details.stats.originalSize);
+            console.log(details.name + ': ' + details.stats.minifiedSize);
+        }))
         .pipe(gulp.dest(cfg.BUILD_DIR))
         .pipe(connect.reload());
 });

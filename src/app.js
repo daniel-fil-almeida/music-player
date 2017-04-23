@@ -1,13 +1,11 @@
 'use strict';
 
 (function () {
-    angular.module('my-app', [
+    var module = angular.module('my-app', [
         'app.templates',
         'ngComponentRouter', 
+        'ui.router',
         'ui.bootstrap',
-        'ui.router'
-        
-
     ])
     .config(function($locationProvider) {
         $locationProvider.html5Mode(true);
@@ -16,13 +14,11 @@
     .component('app', {
         template: `
             <header></header>
-            <ng-outlet></ng-outlet>
-            <footer class="footer">
-              <div class="container">
-                <p class="text-muted">Daniel Almeida</p>
-              </div>
-            </footer>
-
+            <div class='mainContent'>
+                <jumbotron></jumbotron>
+                <ng-outlet></ng-outlet>
+            </div>
+            <footer>Daniel Almeida</footer>
         `,
         $routeConfig: [
             {path: '/', name: 'Playlist', component: 'playlist', useAsDefault: true},
@@ -35,4 +31,6 @@
 
         console.log('my-app is running...');
     });
+
+
 })();

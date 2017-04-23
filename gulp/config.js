@@ -7,6 +7,7 @@ var CFG = {
     BUILD_DEPS: {
         JS: [
             'node_modules/angular/angular.js',
+            'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
             'node_modules/@angular/router/angular1/angular_1_router.js',
             
         ],

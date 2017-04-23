@@ -7,7 +7,7 @@
         this.$routerOnActivate = function(next, previous) {
             
             var song_id = next.params.id;  // Get the song identified by the route parameter
-            songFactory.getSong(song_id).then(function(data) {
+            songFactory.get(song_id).then(function(data) {
                 
                 $scope.song = data.data[0];
               
